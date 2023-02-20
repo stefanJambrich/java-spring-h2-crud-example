@@ -22,6 +22,7 @@ public class BookService implements IBookService {
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
         bookRepository.findAll().forEach(books::add);
+
         return books;
     }
 

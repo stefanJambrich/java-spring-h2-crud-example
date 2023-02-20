@@ -13,6 +13,9 @@ public class Book {
     @Column
     private String name;
 
+    @ManyToOne
+    private Author author;
+
     public Book(int id, String name) {
         this.id = id;
         this.name = name;
@@ -35,5 +38,13 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }
